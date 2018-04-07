@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Scanner;
 
-public class wordeffects {
+public class WordEffects {
 
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class wordeffects {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Input a string: ");
 
-            String inputChars = scanner.next();
+            String inputChars = scanner.nextLine();
 
             System.out.println("Enter a choice:\n1) UPPERCASE\n2) lowercase\n3) numberize\n4) Canadianize it\n" +
                     "5) Respond\n6) De-Space-It\n7) Character count");
@@ -25,7 +25,7 @@ public class wordeffects {
             //        System.out.println(String.format("%s, your age is %d", inputChars, choice));
             switch (selection) {
                 case 1:
-                    System.out.println(inputChars + " Upper cased = " + inputChars.toUpperCase());
+                    printUppercase(inputChars);
                     break;
                 case 2:
                     System.out.println(inputChars + " lower cased = " + inputChars.toLowerCase());
@@ -45,4 +45,9 @@ public class wordeffects {
             }
         }
     }
+    private static void printUppercase(String input) {
+        System.out.println(input + " Upper cased = " + input.toUpperCase());
+    }
 }
+
+//static function
